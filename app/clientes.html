@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+
+    <a href="./index.html" ><h2>Ir para a pagina Inicial</h2></a>
+
+    <h1 class="text-center">Cadastrar Clientes</h1>
+
+    <div id="mensagemView"></div>
+
+    <form class="form">
+
+        <div class="form-group">
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" class="form-control" required autofocus/>
+        </div>
+
+        <div class="form-group">
+            <label for="cpf">CPF</label>
+            <input type="text" min="11" id="cpf" class="form-control" required/>
+        </div>
+
+        <div class="form-group">
+            <label for="conta">Conta</label>
+            <input id="conta" type="text" class="form-control" min="1" step="1" value="1" required/>
+        </div>
+
+        <button class="btn btn-primary" type="submit" onclick="clienteController.inserir(event)">Inserir</button>
+    </form>
+
+    <br>
+    <br>
+
+    <table>
+        <thead>
+        <tr>
+            <th>DATA DE CRIAÇÃO</th>
+            <th>CONTA</th>
+            <th>SALDO</th>
+        </tr>
+        </thead>
+
+        <tbody id='continhas'>
+        </tbody>
+
+        <tfoot>
+        </tfoot>
+    </table>
+    
+    <table>
+        <thead>
+        <tr>
+            <th>DATA DE CRIAÇÃO</th>
+            <th>CONTA</th>
+            <th>SALDO</th>
+        </tr>
+        </thead>
+
+        <tbody id='vai'>
+        </tbody>
+
+        <tfoot>
+        </tfoot>
+    </table>
+
+    <script src="js/model/conta.js"></script>
+    <script src="js/model/conta-bonificada.js"></script>
+    <script src="js/model/poupanca.js"></script>
+    <script src="js/model/contas.js"></script>
+    <script src="js/model/cliente.js"></script>
+    <script src="js/model/clientes.js"></script>
+    <script src="js/controller/conta-controller.js"></script>
+    <script src="js/controller/cliente-controller.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
